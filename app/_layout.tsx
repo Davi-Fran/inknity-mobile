@@ -10,6 +10,8 @@ export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+    Ubuntu_Regular: require('../assets/fonts/Ubuntu-Regular.ttf'),
+    Ubuntu_Bold: require('../assets/fonts/Ubuntu-Bold.ttf'),
   });
 
   if (!loaded) {

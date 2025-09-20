@@ -1,75 +1,113 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
+import react from 'react';
+import { View, Text, StyleSheet, Image} from 'react-native'; 
+import { Fontes } from '@/constants/Fontes';
+import { Cores } from '@/constants/Colors';
 
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
 
-export default function HomeScreen() {
+export default function Home() {
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12',
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          {`Tap the Explore tab to learn more about what's included in this starter app.`}
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          {`When you're ready, run `}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
-  );
-}
+     <View style={styles.conteiner}>  
+       <View style={styles.imagem}>
+        <Image source={require('@/assets/images/forest.png')} />
+       </View>
+     
+       <View style={styles.conteinerTitulo}> 
+          <Text style={styles.titulo}>Login</Text>
+       </View>
+
+      <view style={styles.conteinerInputs}> 
+        <input style={styles.inputs} placeholder="Email ou nome de usúario" /> 
+        <input style={styles.inputs} placeholder="Senha" />
+      </view>
+
+      <view style={styles.conteinerButton}>
+        <button style={styles.button}>Entrar</button>
+      </view>
+      <view style={styles.conteinerText}></view>
+        <text style={styles.text1}>Não tem conta? <text style={styles.text2}>Cadastre-se!</text></text>
+      
+    </View>
+  )
+} 
 
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
+  conteiner: {
+    height: 900,
     alignItems: 'center',
-    gap: 8,
+    justifyContent: 'flex-start',
+    backgroundColor: Cores.roxoFundo,
+  },  
+  imagem:{
+    alignItems: 'center',
+    width: '100%',
+    height: '30%', 
+    borderRadius: 4,
   },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
+  conteinerTitulo: {
+    maxHeight: 60,
+    borderWidth: 5,
+    borderBottomWidth: 0,
+    borderTopWidth: 0,
+    borderLeftColor: Cores.roxo,
+    borderRightColor: Cores.amarelo,
+    flex: 1,
+    gap: 5,
+    marginTop: 80,
   },
-  reactLogo: {
-    height: 178,
+  titulo: { 
+    fontSize:52,
+    paddingLeft: 80,
+    paddingRight: 80,
+    fontFamily: Fontes.UbuntuBold,
+    color: '#F2F0EF' //Branco da inknity
+  },
+  conteinerInputs: {
+    marginTop: 70,
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 10,
+    
+  },
+  inputs: {
+    color: Cores.branco,
     width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-  },
+    height: 40,
+    backgroundColor: 'transparent',
+    borderColor: Cores.branco,
+    borderRadius: 8,
+    margin: 4,
+    fontSize: 16, 
+    fontFamily: Fontes.UbuntuRegular,
+    paddingLeft: 10,
+ }, 
+conteinerButton: {
+  marginTop: 50,
+},
+
+button: {
+  color: Cores.branco,
+  fontSize: 22,
+  fontFamily: Fontes.UbuntuBold,
+  textAlign: 'center',
+  borderRadius: 14,
+  borderColor: Cores.roxo,
+  borderWidth: 2,
+  width: 290,
+  height: 60,
+  backgroundColor: Cores.roxoEscuro,
+},
+text1: {
+  color: Cores.branco,
+  fontSize: 12,
+  fontFamily: Fontes.UbuntuRegular,
+},
+text2: {
+  color: Cores.roxo,
+  fontSize: 12,
+  fontFamily: Fontes.UbuntuRegular,
+},
+conteinerText: {
+  marginTop: 5,
+},
+
 });
