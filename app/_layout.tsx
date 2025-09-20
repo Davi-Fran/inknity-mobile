@@ -9,9 +9,9 @@ import { useColorScheme } from '@/hooks/useColorScheme';
 export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-    Ubuntu_Regular: require('../assets/fonts/Ubuntu-Regular.ttf'),
-    Ubuntu_Bold: require('../assets/fonts/Ubuntu-Bold.ttf'),
+    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'), // importação fonte Space Mono
+    Ubuntu_Regular: require('../assets/fonts/Ubuntu-Regular.ttf'), // importação fonte Ubuntu Regular
+    Ubuntu_Bold: require('../assets/fonts/Ubuntu-Bold.ttf'), // importação fonte Ubuntu Bold
   });
 
   if (!loaded) {
