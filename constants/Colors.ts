@@ -4,4 +4,5 @@ export const Cores = {
     amarelo: '#EFC409', // amarelo inknity
     roxo: '#820399', // roxo inknity
     roxoEscuro: '#82039926', // roxo inknity com opacidade de 15%
+    roxo40: '#211B3666' // roxo inknity com opacidade de 40%
 }
