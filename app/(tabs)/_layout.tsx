@@ -35,7 +35,21 @@ export default function TabLayout() {
       <Tabs.Screen
         name="cadastro"
         options={{
-          title: 'Explore',
+          title: 'Cadastro',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+        }}
+      />
+       <Tabs.Screen
+        name="criacaoperfil"
+        options={{
+          title: 'Perfil',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+        }}
+      />
+       <Tabs.Screen
+        name="estilos"
+        options={{
+          title: 'estilos',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
         }}
       />

@@ -8,7 +8,7 @@ export default function CadastroScreen() {
     return (
         <View style={styles.conteiner}>
             <View style={styles.imagem}>
-              <Image source={require('@/assets/images/forest.png')} />
+              <Image source={require('@/assets/images/forest.png')}/>
             </View>
             <View style={styles.conteinerTitulo}> 
                <Text style={styles.titulo}>Cadastro</Text>
@@ -28,18 +28,18 @@ export default function CadastroScreen() {
 }
 
 const styles = StyleSheet.create({
-  conteiner: {
+  conteiner: { // conteiner principal 
     height: 900,
     alignItems: 'center',
     backgroundColor: Cores.roxoFundo, // roxo inknity fundo tela
   },  
-  imagem:{ 
+  imagem:{ // estilisação imagem
     alignItems: 'center',
     width: '100%',
     height: '30%', 
     borderRadius: 4,
   },
-  conteinerTitulo: {
+  conteinerTitulo: { // conteiner titulo
     maxHeight: 60,
     borderWidth: 5,
     borderBottomWidth: 0,
@@ -50,20 +50,20 @@ const styles = StyleSheet.create({
     gap: 5,
     marginTop: 50,
   },
-  titulo: { 
+  titulo: { // estilização titulo
     fontSize:52,
     paddingLeft: 37,
     paddingRight: 37,
     fontFamily: Fontes.UbuntuBold, // fonte Ubuntu Bold
     color: '#F2F0EF' //Branco inknity
   },
-  conteinerInputs: {
+  conteinerInputs: { // conteiner inputs
     marginTop: 70,
     display: 'flex',
     flexDirection: 'column',
     gap: 10,
   },
-  inputs: {
+  inputs: { // estilização inputs
     color: Cores.branco, // branco inknity
     width: 290,
     height: 40,
@@ -75,11 +75,11 @@ const styles = StyleSheet.create({
     fontFamily: Fontes.UbuntuRegular, // fonte Ubuntu Regular
     paddingLeft: 10,
  }, 
-conteinerButton: {
+conteinerButton: { // conteiner button
   marginTop: 50,
 },
 
-button: {
+button: { // estilização button
   color: Cores.branco, // branco inknity
   fontSize: 22,
   fontFamily: Fontes.UbuntuBold, // fonte Ubuntu Bold
@@ -91,17 +91,17 @@ button: {
   height: 60,
   backgroundColor: Cores.roxoEscuro, // roxo inknity com opacidade de 15%
 },
-text1: {  
+text1: {  // estilização texto 1
   color: Cores.branco, // branco inknity
   fontSize: 12,
   fontFamily: Fontes.UbuntuRegular, // fonte Ubuntu Regular
-},
-text2: {
+}, 
+text2: { // estilização texto 2
   color: Cores.roxo, // roxo inknity
   fontSize: 12,
   fontFamily: Fontes.UbuntuRegular, // fonte Ubuntu Regular
 },
-conteinerText: {
+conteinerText: { // conteiner texto
   marginTop: 15,
 },
 
