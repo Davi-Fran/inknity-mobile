@@ -1,7 +1,6 @@
-import react from 'react';
-import { View, Text, StyleSheet, Image, TextInput} from 'react-native'; 
-import { Fontes } from '@/constants/Fontes';
 import { Cores } from '@/constants/Colors';
+import { Fontes } from '@/constants/Fontes';
+import { Image, StyleSheet, TextInput, View } from 'react-native';
 
 // Tela de Criação de Perfil
 export default function CriacaoPerfilScreen() {
