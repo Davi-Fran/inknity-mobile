@@ -1,14 +1,13 @@
-import react from 'react';
-import { View, Text, StyleSheet, Image} from 'react-native'; 
-import { Fontes } from '@/constants/Fontes';
 import { Cores } from '@/constants/Colors';
+import { Fontes } from '@/constants/Fontes';
+import { Image, StyleSheet, Text, View } from 'react-native';
 
 // Tela de Login
 export default function LoginScreen() {
   return (
      <View style={styles.conteiner}>  
-       <View style={styles.imagem}>
-        <Image source={require('@/assets/images/forest.png')} />
+       <View style={styles.imagem }>
+        <Image style={styles.Image} source={require('@/assets/images/art.png')} />
        </View>
      
        <View style={styles.conteinerTitulo}> 
@@ -32,15 +31,20 @@ export default function LoginScreen() {
 // estilização padrão
 const styles = StyleSheet.create({
   conteiner: {
+    width: '100%',
     height: 900,
     alignItems: 'center',
     backgroundColor: Cores.roxoFundo, // roxo inknity fundo tela
   },  
-  imagem:{ 
+  Image: {
+    width: 412,
+    height: 240, 
+    justifyContent: 'center',
     alignItems: 'center',
-    width: '100%',
-    height: '30%', 
-    borderRadius: 4,
+    
+   },
+  imagem:{ 
+    alignItems: 'center'
   },
   conteinerTitulo: {
     maxHeight: 60,

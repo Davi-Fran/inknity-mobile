@@ -6,12 +6,17 @@ import { Image, StyleSheet, Text, View } from 'react-native';
 export default function PovArtistaScreen() {
   return ( 
         <View style={styles.conteiner}>
-            <Text></Text>
+            
             <View style={styles.imagem}>
+              <Image style={styles.seta} source={require('@/assets/images/Vector.png')}/>
               <Image source={require('@/assets/images/inknityLogo.png')} />
             </View> 
             <View style={styles.conteinerAvatar}>
               <Image style={styles.avatar} source={require('@/assets/images/avatar.png')} />
+              
+              <View>
+                <Text>Editar perfil</Text>
+              </View>
             </View>
         </View>
   )
@@ -22,17 +27,26 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: Cores.roxoFundo, // roxo inknity fundo tela
   },  
+  seta: {
+    width: 12,
+    height: 20,
+    marginLeft: -360,
+  },
   imagem:{
-    width: '100%',
+    width: 412,
     height: 150, 
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: Cores.roxo87,
   }, 
   conteinerAvatar: { 
-    width: '100%',
-    marginLeft: '15%',
-    marginTop: -40,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingRight: 20,
+    paddingLeft: 20,
+    width: 412,
+    // marginTop: -40,
   },
   avatar :{
     borderRadius: 100,
