@@ -9,6 +9,7 @@ export default function PovArtistaScreen() {
   return ( 
         <View style={styles.conteiner}>
             <View style={styles.imagem}>
+            
               <Image style={styles.seta} source={require('@/assets/images/Vector.png')}/>
               <Image source={require('@/assets/images/inknityLogo.png')} />
             </View> 
@@ -73,5 +74,5 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     borderWidth: 4,
     borderColor: Cores.roxoFundo, // roxo inknity fundo tela
-  }, 
+  },
 });

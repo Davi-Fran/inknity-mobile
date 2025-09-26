@@ -1,6 +1,6 @@
 import { Cores } from '@/constants/Colors';
 import { Fontes } from '@/constants/Fontes';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, View, TextInput } from 'react-native';
 
 // Tela de Login
 export default function LoginScreen() {
@@ -15,8 +15,32 @@ export default function LoginScreen() {
        </View>
 
       <View style={styles.conteinerInputs}> 
-        <input style={styles.inputs} placeholder="Email ou nome de usúario" /> 
-        <input style={styles.inputs} placeholder="Senha" />
+        <TextInput  style={{
+          color: Cores.branco, // branco inknity
+          width: 306,
+          height: 50,
+          backgroundColor: 'transparent',
+          borderColor: Cores.branco, // branco inknity
+          borderRadius: 8,
+          margin: 4,
+          borderWidth: 2,
+          fontSize: 16, 
+          fontFamily: Fontes.UbuntuRegular, // fonte Ubuntu Regular
+          paddingLeft: 10,
+        }} placeholder="Email ou nome de usúario" /> 
+        <TextInput style={{
+          color: Cores.branco, // branco inknity
+          width: 306,
+          height: 50,
+          backgroundColor: 'transparent',
+          borderColor: Cores.branco, // branco inknity
+          borderRadius: 8,
+          margin: 4,
+          borderWidth: 2,
+          fontSize: 16, 
+          fontFamily: Fontes.UbuntuRegular, // fonte Ubuntu Regular
+          paddingLeft: 10,
+        }} placeholder="Senha" />
       </View>
 
       <View style={styles.conteinerButton}>

@@ -1,7 +1,6 @@
-import react from 'react';
-import { View, Text, StyleSheet, Image, TextInput} from 'react-native'; 
-import { Fontes } from '@/constants/Fontes';
 import { Cores } from '@/constants/Colors';
+import { Fontes } from '@/constants/Fontes';
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 // Tela de seleção de estilos
 export default function EstilosScreen() {
@@ -42,15 +41,20 @@ export default function EstilosScreen() {
                   borderColor: Cores.branco, // branco inknity',
                   borderWidth: 1,
                   borderRadius: 8,
-                  padding: 10,
+                  paddingTop: 20,
+                  paddingLeft: 10,
                   width: 250,
-                  textAlign:'center',
+                  textAlign:'left',
                   backgroundColor: 'transparent',
                   fontSize: 16, 
                   color: Cores.branco, // branco inknity
                   fontFamily: Fontes.UbuntuRegular, // fonte Ubuntu Regular
-                 }} placeholder="outros"/>
-                  <button style={styles.buttonI}>+</button>
+                 }} placeholder="Outros"/>
+                  <TouchableOpacity style={styles.btn}>
+                    <View  style={styles.buttonI}> 
+                        <Text style={styles.textButton}>+</Text>
+                    </View>
+                  </TouchableOpacity>
               </View>
               <View style={styles.conteinerButton}>
                   <button style={styles.button}>Finalizar</button>
@@ -119,19 +123,25 @@ const styles = StyleSheet.create({
     right: -20,
     top: 0, 
   },
+  textButton: {
+    fontSize: 24,
+    color: Cores.branco,
+  },
+  btn: {
+    height: 65
+  },
   buttonI: {
    marginTop: 1,
    marginLeft: 10,
-   color: Cores.branco, // branco inknity
-   fontSize: 14,
-   fontFamily: Fontes.UbuntuBold, // fonte Ubuntu Bold
-   textAlign: 'center',
    borderRadius: 14,
    borderColor: Cores.roxo, // roxo inknity
    borderWidth: 2,
    width: 90,
    height: 60,
-   backgroundColor: Cores.roxo60, // roxo inknity com opacidade de 60%
+   backgroundColor: Cores.roxo60,
+   flex: 1,
+   justifyContent: 'center',
+   alignItems: 'center', // roxo inknity com opacidade de 60%
 },
  conteinerInputs: {
     marginTop: 70,
@@ -165,6 +175,7 @@ const styles = StyleSheet.create({
   backgroundColor: Cores.roxoEscuro, // roxo inknity com opacidade de 15%
 },
 conteinerButton: {
-  marginTop: 50,
+  marginTop: 80,
+  marginBottom: 80.
 },
 });
