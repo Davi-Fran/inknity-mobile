@@ -23,6 +23,9 @@ export default function PovArtistaScreen() {
             </View>
             <View style={styles.NameTagConteiner}>
               <Text style={styles.NameTag}> John Doe </Text>
+              <Text style={styles.UserName}> @JohnDoe</Text>
+            </View>
+            <View style={styles.}>
 
             </View>
         </View>
@@ -39,9 +42,15 @@ const styles = StyleSheet.create({
    
   },
   NameTag: {
+    marginLeft: 16, 
     color: Cores.branco,
     fontFamily: Fontes.UbuntuBold,
     fontSize: 26,
+  },
+  UserName: { 
+    color: Cores.cinza,
+    marginLeft: 16, 
+    
   },
   button: {
     marginTop: 15,
