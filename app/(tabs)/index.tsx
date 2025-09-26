@@ -1,6 +1,6 @@
 import { Cores } from '@/constants/Colors';
 import { Fontes } from '@/constants/Fontes';
-import { Image, StyleSheet, Text, View, TextInput } from 'react-native';
+import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 // Tela de Login
 export default function LoginScreen() {
@@ -16,6 +16,7 @@ export default function LoginScreen() {
 
       <View style={styles.conteinerInputs}> 
         <TextInput  style={{
+          outline: 'none',
           color: Cores.branco, // branco inknity
           width: 306,
           height: 50,
@@ -29,6 +30,7 @@ export default function LoginScreen() {
           paddingLeft: 10,
         }} placeholder="Email ou nome de usúario" /> 
         <TextInput style={{
+          outline: 'none',
           color: Cores.branco, // branco inknity
           width: 306,
           height: 50,
@@ -44,7 +46,7 @@ export default function LoginScreen() {
       </View>
 
       <View style={styles.conteinerButton}>
-        <button style={styles.button}>Entrar</button>
+        <TouchableOpacity style={styles.button}>Entrar</TouchableOpacity>
       </View>
       <View style={styles.conteinerText}></View>
         <Text style={styles.text1}>Não tem conta? <Text style={styles.text2}>Cadastre-se!</Text></Text>
@@ -116,6 +118,7 @@ button: {
   fontSize: 22,
   fontFamily: Fontes.UbuntuBold, // fonte Ubuntu Bold
   textAlign: 'center',
+  justifyContent: 'center',
   borderRadius: 14,
   borderColor: Cores.roxo, // roxo inknity
   borderWidth: 2,

@@ -1,5 +1,5 @@
 import { Cores } from '@/constants/Colors';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Fontes } from '@/constants/Fontes';
 import { Button } from '@react-navigation/elements';
 
@@ -15,11 +15,14 @@ export default function PovArtistaScreen() {
             </View> 
             <View style={styles.conteinerAvatar}>
                 <Image style={styles.avatar} source={require('@/assets/images/avatar.png')} />
-                
                 <View style={styles.conteinerButton}>
-                  <Button style={styles.button}>Editar perfil</Button>
+                  <TouchableOpacity style={styles.button}>Editar perfil</TouchableOpacity>
+                  <TouchableOpacity style={styles.button1}>
+                    <Image source={require('@/assets/images/Config.png')} />
+                  </TouchableOpacity>
                 </View>
             </View>
+          <Text> John Doe </Text>
         </View>
   )
 }
@@ -35,18 +38,30 @@ const styles = StyleSheet.create({
     fontFamily: Fontes.UbuntuBold, // fonte Ubuntu Bold
     justifyContent: 'center',
     textAlign: 'center',
-    paddingTop: 14,
-    borderRadius: 14,
+    borderRadius: 8,
     borderColor: Cores.roxo, // roxo inknity
     borderWidth: 2,
     width: 110,
-    height: 50,
+    height: 40,
+    backgroundColor: Cores.roxoEscuro, // roxo inknity com opacidade de 15%
+  },
+  button1: {
+    marginTop: 15,
+    color: Cores.branco, // branco inknity
+    fontFamily: Fontes.UbuntuBold, // fonte Ubuntu Bold
+    justifyContent: 'center', 
+    alignItems:'center',
+    borderRadius: 8,
+    borderColor: Cores.roxo, // roxo inknity
+    borderWidth: 2,
+    width: 40,
+    marginLeft: 20,
+    height: 40,
     backgroundColor: Cores.roxoEscuro, // roxo inknity com opacidade de 15%
   },
   conteinerButton: {
     marginTop: 40,
-    alignItems: 'center',
-    justifyContent: 'center',
+    flexDirection: 'row',
   },
   seta: {
     width: 12,
@@ -71,7 +86,9 @@ const styles = StyleSheet.create({
     marginTop: -40,
   },
   avatar :{
-    borderRadius: 100,
+    width: 110,
+    height: 110,
+    borderRadius: 75,
     borderWidth: 4,
     borderColor: Cores.roxoFundo, // roxo inknity fundo tela
   },

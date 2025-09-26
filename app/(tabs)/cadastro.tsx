@@ -1,5 +1,5 @@
 import react from 'react';
-import { View, Text, StyleSheet, Image} from 'react-native'; 
+import { View, Text, StyleSheet, Image, TextInput, TouchableNativeFeedback, TouchableOpacity} from 'react-native'; 
 import { Fontes } from '@/constants/Fontes';
 import { Cores } from '@/constants/Colors';
 
@@ -14,15 +14,54 @@ export default function CadastroScreen() {
                <Text style={styles.titulo}>Cadastro</Text>
             </View>
             <View style={styles.conteinerInputs}> 
-              <input style={styles.inputs} placeholder="Email" /> 
-              <input style={styles.inputs} placeholder="Senha" />
-              <input style={styles.inputs} placeholder="Confirmar senha" />
+              <TextInput  style={{
+                        outline: 'none',
+                        color: Cores.branco, // branco inknity
+                        width: 306,
+                        height: 50,
+                        backgroundColor: 'transparent',
+                        borderColor: Cores.branco, // branco inknity
+                        borderRadius: 8,
+                        margin: 4,
+                        borderWidth: 2,
+                        fontSize: 16, 
+                        fontFamily: Fontes.UbuntuRegular, // fonte Ubuntu Regular
+                        paddingLeft: 10,
+                      }} placeholder="Email" /> 
+              <TextInput  style={{
+                        outline: 'none',
+                        color: Cores.branco, // branco inknity
+                        width: 306,
+                        height: 50,
+                        backgroundColor: 'transparent',
+                        borderColor: Cores.branco, // branco inknity
+                        borderRadius: 8,
+                        margin: 4,
+                        borderWidth: 2,
+                        fontSize: 16, 
+                        fontFamily: Fontes.UbuntuRegular, // fonte Ubuntu Regular
+                        paddingLeft: 10,
+                      }} placeholder="Senha" />
+              <TextInput  style={{
+                        outline: 'none',
+                        color: Cores.branco, // branco inknity
+                        width: 306,
+                        height: 50,
+                        backgroundColor: 'transparent',
+                        borderColor: Cores.branco, // branco inknity
+                        borderRadius: 8,
+                        margin: 4,
+                        borderWidth: 2,
+                        fontSize: 16, 
+                        fontFamily: Fontes.UbuntuRegular, // fonte Ubuntu Regular
+                        paddingLeft: 10,
+                      }} placeholder="Confirmar Senha" />
             </View>
             <View style={styles.conteinerButton}>
-                <button style={styles.button}>Cadastrar</button>
+                <TouchableOpacity style={styles.button}>Cadastrar</TouchableOpacity>
                 </View>
-                <view style={styles.conteinerText}></view>
-                <text style={styles.text1}>Já tem conta? <text style={styles.text2}>Faça Login!</text></text>
+                <View style={styles.conteinerText}></View>
+                <Text style={styles.text1}>Já tem conta? <Text style={styles.text2}>Faça Login!</Text></Text>
         </View>
     );
 }
@@ -84,6 +123,7 @@ button: { // estilização button
   fontSize: 22,
   fontFamily: Fontes.UbuntuBold, // fonte Ubuntu Bold
   textAlign: 'center',
+  justifyContent: 'center',
   borderRadius: 14,
   borderColor: Cores.roxo, // roxo inknity
   borderWidth: 2,

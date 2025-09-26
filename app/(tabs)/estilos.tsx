@@ -57,7 +57,7 @@ export default function EstilosScreen() {
                   </TouchableOpacity>
               </View>
               <View style={styles.conteinerButton}>
-                  <button style={styles.button}>Finalizar</button>
+                  <TouchableOpacity style={styles.button}>Finalizar</TouchableOpacity>
               </View>
         </View>
   );
@@ -167,6 +167,7 @@ const styles = StyleSheet.create({
   fontSize: 22,
   fontFamily: Fontes.UbuntuBold, // fonte Ubuntu Bold
   textAlign: 'center',
+  justifyContent: 'center',
   borderRadius: 14,
   borderColor: Cores.roxo, // roxo inknity
   borderWidth: 2,

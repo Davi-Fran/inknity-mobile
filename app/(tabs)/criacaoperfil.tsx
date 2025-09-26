@@ -1,6 +1,6 @@
 import { Cores } from '@/constants/Colors';
 import { Fontes } from '@/constants/Fontes';
-import { Image, StyleSheet, TextInput, View } from 'react-native';
+import { Image, StyleSheet, TextInput, TouchableOpacity, View } from 'react-native';
 
 // Tela de Criação de Perfil
 export default function CriacaoPerfilScreen() {
@@ -10,9 +10,49 @@ export default function CriacaoPerfilScreen() {
               <Image source={require('@/assets/images/adphoto.png')} />
             </View>
             <View style={styles.conteinerInputs}>
-              <input style={styles.inputs} placeholder="Nome de exibição" /> 
-              <input style={styles.inputs} placeholder="Nome de usúario" />
-              <input style={styles.inputs} placeholder="Pronomes" />
+              <TextInput  style={{
+                        outline: 'none',
+                        color: Cores.branco, // branco inknity
+                        width: 306,
+                        height: 50,
+                        backgroundColor: 'transparent',
+                        borderColor: Cores.branco, // branco inknity
+                        borderRadius: 8,
+                        margin: 4,
+                        borderWidth: 2,
+                        fontSize: 16, 
+                        fontFamily: Fontes.UbuntuRegular, // fonte Ubuntu Regular
+                        paddingLeft: 10,
+                      }} placeholder="Nome de exibição" 
+                /> 
+              <TextInput  style={{
+                        outline: 'none',
+                        color: Cores.branco, // branco inknity
+                        width: 306,
+                        height: 50,
+                        backgroundColor: 'transparent',
+                        borderColor: Cores.branco, // branco inknity
+                        borderRadius: 8,
+                        margin: 4,
+                        borderWidth: 2,
+                        fontSize: 16, 
+                        fontFamily: Fontes.UbuntuRegular, // fonte Ubuntu Regular
+                        paddingLeft: 10,
+                      }} placeholder="Nome de usuário" />
+              <TextInput  style={{
+                        outline: 'none',
+                        color: Cores.branco, // branco inknity
+                        width: 306,
+                        height: 50,
+                        backgroundColor: 'transparent',
+                        borderColor: Cores.branco, // branco inknity
+                        borderRadius: 8,
+                        margin: 4,
+                        borderWidth: 2,
+                        fontSize: 16, 
+                        fontFamily: Fontes.UbuntuRegular, // fonte Ubuntu Regular
+                        paddingLeft: 10,
+                      }} placeholder="Pronomes" />
               <TextInput
                 multiline
                 numberOfLines={4} // define a altura inicial
@@ -20,7 +60,7 @@ export default function CriacaoPerfilScreen() {
                   marginLeft: 4,
                   height: 150,
                   borderColor: Cores.branco, // branco inknity',
-                  borderWidth: 1,
+                  borderWidth: 2,
                   borderRadius: 8,
                   padding: 10,
                   width: 306,
@@ -34,7 +74,7 @@ export default function CriacaoPerfilScreen() {
               />
             </View>
             <View style={styles.conteinerButton}>
-                <button style={styles.button}>Avançar</button>
+                <TouchableOpacity style={styles.button}>Avançar</TouchableOpacity>
             </View>
         </View>
   );
@@ -83,6 +123,7 @@ button: { // estilização button
   fontSize: 22,
   fontFamily: Fontes.UbuntuBold, // fonte Ubuntu Bold
   textAlign: 'center',
+  justifyContent: 'center',
   borderRadius: 14,
   borderColor: Cores.roxo, // roxo inknity
   borderWidth: 2,
