@@ -14,16 +14,16 @@ export default function LoginScreen() {
           <Text style={styles.titulo}>Login</Text>
        </View>
 
-      <view style={styles.conteinerInputs}> 
+      <View style={styles.conteinerInputs}> 
         <input style={styles.inputs} placeholder="Email ou nome de usúario" /> 
         <input style={styles.inputs} placeholder="Senha" />
-      </view>
+      </View>
 
-      <view style={styles.conteinerButton}>
+      <View style={styles.conteinerButton}>
         <button style={styles.button}>Entrar</button>
-      </view>
-      <view style={styles.conteinerText}></view>
-        <text style={styles.text1}>Não tem conta? <text style={styles.text2}>Cadastre-se!</text></text>
+      </View>
+      <View style={styles.conteinerText}></View>
+        <Text style={styles.text1}>Não tem conta? <Text style={styles.text2}>Cadastre-se!</Text></Text>
       
     </View>
   )

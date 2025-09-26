@@ -7,35 +7,49 @@ import { Cores } from '@/constants/Colors';
 export default function EstilosScreen() {
   return (
         <View style={styles.conteiner}>
-            <text style={styles.titulo}>Selecione seus estilos!</text>
+            <Text style={styles.titulo}>Selecione seus estilos!</Text>
               <View style={styles.conteinerEstilos}>  
                 <View style={styles.estilosR}>
-                  <text style={styles.textEstilos}>Cyberpunk<text style={styles.textSelect}>X</text></text>
+                  <Text style={styles.textEstilos}>Cyberpunk<Text style={styles.textSelect}>X</Text></Text>
                 </View>
                 <View style={styles.estilosR}>
-                  <text style={styles.textEstilos}>Realista<text style={styles.textSelect}>X</text></text>
+                  <Text style={styles.textEstilos}>Realista<Text style={styles.textSelect}>X</Text></Text>
                 </View>
                 <View style={styles.estilosR}>
-                  <text style={styles.textEstilos}>Medieval<text style={styles.textSelect}>X</text></text>
+                  <Text style={styles.textEstilos}>Medieval<Text style={styles.textSelect}>X</Text></Text>
                 </View>
                 <View style={styles.estilosP}>
-                  <text style={styles.textEstilos}>Semirrealismo<text style={styles.textSelect}>+</text></text>
+                  <Text style={styles.textEstilos}>Semirealismo<Text style={styles.textSelect}>+</Text></Text>
                 </View>
                 <View style={styles.estilosP}>
-                  <text style={styles.textEstilos}>Aquarela<text style={styles.textSelect}>+</text></text>
+                  <Text style={styles.textEstilos}>Aquarela<Text style={styles.textSelect}>+</Text></Text>
                 </View>
                 <View style={styles.estilosP}>
-                  <text style={styles.textEstilos}>Tradicional<text style={styles.textSelect}>+</text></text>
+                  <Text style={styles.textEstilos}>Tradicional<Text style={styles.textSelect}>+</Text></Text>
                 </View>
                 <View style={styles.estilosP}>
-                  <text style={styles.textEstilos}>Steampunk<text style={styles.textSelect}>+</text></text>
+                  <Text style={styles.textEstilos}>Steampunk<Text style={styles.textSelect}>+</Text></Text>
                 </View>
                 <View style={styles.estilosP}>
-                  <text style={styles.textEstilos}>Pixelart<text style={styles.textSelect}>+</text></text>
+                  <Text style={styles.textEstilos}>Pixelart<Text style={styles.textSelect}>+</Text></Text>
                 </View>
              </View>
               <View style={styles.conteinerInputs}>
-                  <input style={styles.inputs} placeholder="outros"/>
+                  <TextInput  multiline
+                numberOfLines={4} style={{ 
+                  marginLeft: 4,
+                  height: 60,
+                  borderColor: Cores.branco, // branco inknity',
+                  borderWidth: 1,
+                  borderRadius: 8,
+                  padding: 10,
+                  width: 250,
+                  textAlign:'center',
+                  backgroundColor: 'transparent',
+                  fontSize: 16, 
+                  color: Cores.branco, // branco inknity
+                  fontFamily: Fontes.UbuntuRegular, // fonte Ubuntu Regular
+                 }} placeholder="outros"/>
                   <button style={styles.buttonI}>+</button>
               </View>
               <View style={styles.conteinerButton}>
@@ -66,14 +80,14 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     flexDirection: 'row',
     flexWrap: 'wrap',
+    justifyContent: 'center',
   },
   estilosR:{
     width: 150,
     height: 40,
     borderRadius: 4,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 20,
+    justifyContent: 'space-between',
+    padding: 10,
     backgroundColor: Cores.roxo, // roxo inknity
     gap: 10,
     margin: 10,
@@ -83,9 +97,8 @@ const styles = StyleSheet.create({
     width: 150,
     height: 40,
     borderRadius: 4,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 20,
+    justifyContent: 'space-between',
+    padding: 10,
     backgroundColor: Cores.cinzaEscuro, // roxo inknity
     gap: 10,
     margin: 10,
@@ -96,18 +109,15 @@ const styles = StyleSheet.create({
     color: Cores.branco, // branco inknity
     fontSize: 18,        
     textAlign: 'center', 
-    marginRight: 20, 
+    marginRight: 20,
   },
   textSelect:{
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: 50,
     fontFamily: Fontes.UbuntuRegular, // fonte Ubuntu Regular
     color: Cores.branco, // branco inknity
     fontSize: 16,
     position: 'absolute',
-    right: 10,
-    top: 10, 
+    right: -20,
+    top: 0, 
   },
   buttonI: {
    marginTop: 1,
@@ -126,6 +136,9 @@ const styles = StyleSheet.create({
  conteinerInputs: {
     marginTop: 70,
     flexDirection: 'row',
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center',
  },
   inputs: {
     color: Cores.branco, // branco inknity
