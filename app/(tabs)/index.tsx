@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     borderRightColor: Cores.amarelo, // amarelo inknity
     flex: 1,
     gap: 5,
-    marginTop: 50,
+    marginTop: 80,
   },
   titulo: { 
     fontSize:52,

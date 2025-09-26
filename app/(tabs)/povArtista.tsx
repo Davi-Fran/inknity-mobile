@@ -1,7 +1,6 @@
 import { Cores } from '@/constants/Colors';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Fontes } from '@/constants/Fontes';
-import { Button } from '@react-navigation/elements';
 
 // Tela de Pov Artista
 
@@ -22,7 +21,10 @@ export default function PovArtistaScreen() {
                   </TouchableOpacity>
                 </View>
             </View>
-          <Text> John Doe </Text>
+            <View style={styles.NameTagConteiner}>
+              <Text style={styles.NameTag}> John Doe </Text>
+
+            </View>
         </View>
   )
 }
@@ -32,6 +34,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: Cores.roxoFundo, // roxo inknity fundo tela
   },  
+  NameTagConteiner: {
+    width: '100%',
+   
+  },
+  NameTag: {
+    color: Cores.branco,
+    fontFamily: Fontes.UbuntuBold,
+    fontSize: 26,
+  },
   button: {
     marginTop: 15,
     color: Cores.branco, // branco inknity
@@ -56,6 +67,7 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     width: 40,
     marginLeft: 20,
+    marginRight: 20,
     height: 40,
     backgroundColor: Cores.roxoEscuro, // roxo inknity com opacidade de 15%
   },
@@ -83,6 +95,7 @@ const styles = StyleSheet.create({
     paddingRight: 20,
     paddingLeft: 20,
     width: 412,
+    marginLeft: 20,
     marginTop: -40,
   },
   avatar :{
