@@ -10,4 +10,5 @@ export const Cores = {
     cinzaEscuro:'#44444466', // cinza com opacidade de 40%
     cinza: '#f2f0ef7c', 
     roxoProfile: '#272238',
+    roxoInitial: '#220C39'
 }
