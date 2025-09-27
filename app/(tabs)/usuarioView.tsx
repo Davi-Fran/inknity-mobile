@@ -14,16 +14,11 @@ export default function PovArtistaScreen() {
             </View> 
             <View style={styles.conteinerAvatar}>
                 <Image style={styles.avatar} source={require('@/assets/images/avatar.png')} />
-                <View style={styles.conteinerButton}>
-                  <TouchableOpacity style={styles.button}>Editar perfil</TouchableOpacity>
-                  <TouchableOpacity style={styles.button1}>
-                    <Image source={require('@/assets/images/Config.png')} />
-                  </TouchableOpacity>
-                </View>
             </View>
             <View style={styles.NameTagConteiner}>
               <Text style={styles.NameTag}>John Doe</Text>
               <Text style={styles.UserName}>@JohnDoe</Text>
+              <Image style={styles.chat} source={require('@/assets/images/Chat.png')}/>
             </View>
             <View style={styles.NavBar}>
                 <Text style={styles.TextAmarelo}>Posts</Text>
@@ -125,6 +120,7 @@ const styles = StyleSheet.create({
   NavBar: {
     width: 370,
     height: 60,
+    marginTop: 20,
     marginLeft: 15 ,
     marginRight: 15  ,
     marginBottom: 15 , 
@@ -264,6 +260,12 @@ const styles = StyleSheet.create({
     width: 12,
     height: 20,
     marginLeft: -360,
+  },
+   chat: {
+    marginTop: -40,
+    marginLeft: 165,
+    width: 20,
+    height: 20,
   },
   imagem:{
     width: 412,

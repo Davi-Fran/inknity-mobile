@@ -26,34 +26,8 @@ export default function PovArtistaScreen() {
               <Text style={styles.UserName}>@JohnDoe</Text>
             </View>
             <View style={styles.NavBar}>
-                <Text style={styles.TextAmarelo}>Posts</Text>
-                <Text style={styles.TextPreto}>Comissões</Text>
-            </View>
-            <View style={styles.StylesBar}>
-                <View style={styles.StylesARTr}>
-                  <Text style={styles.styleText}>Medieval</Text>
-                </View>
-                <View style={styles.StylesARTc}>
-                   <Text style={styles.styleText}>Medieval</Text>
-                </View>
-                <View style={styles.StylesARTc}>
-                   <Text style={styles.styleText}>Medieval</Text>
-                </View>
-                <View style={styles.StylesARTc}>
-                   <Text style={styles.styleText}>Medieval</Text>
-                </View>
-                <View style={styles.StylesARTc}>
-                   <Text style={styles.styleText}>Medieval</Text>
-                </View>
-                <View style={styles.StylesARTc}>
-                   <Text style={styles.styleText}>Medieval</Text>
-                </View>
-                <View style={styles.StylesARTc}>
-                   <Text style={styles.styleText}>Medieval</Text>
-                </View>
-                <View style={styles.StylesARTc}>
-                   <Text style={styles.styleText}>Medieval</Text>
-                </View>
+                <Text style={styles.TextPreto}>Posts</Text>
+                <Text style={styles.TextAmarelo}>Comissões</Text>
             </View>
             <View style={styles.profilePost}>
               <View style={styles.profilePostHeader}>

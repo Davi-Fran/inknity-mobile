@@ -60,6 +60,29 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
         }}
       />
+       <Tabs.Screen
+        name="povUsuario"
+        options={{
+          title: 'povUsuario',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+        }}
+      />
+        <Tabs.Screen
+        name="usuarioView"
+        options={{
+          title: 'usuarioView',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="comissoes"
+        options={{
+          title: 'comissoes',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+        }}
+      />
+      
     </Tabs>
   );
 }
+git add

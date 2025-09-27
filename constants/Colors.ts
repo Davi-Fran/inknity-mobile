@@ -9,4 +9,5 @@ export const Cores = {
     roxo40: '#211B3666', // roxo inknity com opacidade de 40%
     cinzaEscuro:'#44444466', // cinza com opacidade de 40%
     cinza: '#f2f0ef7c', 
+    roxoProfile: '#272238',
 }
