@@ -1,3 +1,4 @@
+//index.tsx
 import react from 'react';
 import { View, Text, StyleSheet, Image} from 'react-native'; 
 import { Fontes } from '@/constants/Fontes';
